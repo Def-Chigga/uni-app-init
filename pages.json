@@ -1,0 +1,85 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页
+		{
+			"path": "pages/login/login",
+			"style": {
+				"app-plus": {
+					"titleNView": false //禁用原生导航栏
+				}
+			}
+		},
+		{
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": "home"
+			}
+		},
+		{
+			"path": "pages/map/map",
+			"style": {
+				"navigationBarTitleText": "map"
+			}
+		},
+		{
+			"path": "pages/echarts/echarts",
+			"style": {
+				"navigationBarTitleText": "echarts"
+			}
+		},
+		{
+			"path": "pages/monitor/monitor",
+			"style": {
+				"navigationBarTitleText": "monitor"
+			}
+		},
+		{
+			"path": "pages/user/user",
+			"style": {
+				"navigationBarTitleText": "user"
+			}
+		}
+	],
+	"tabBar": {
+		"color": "#595959",
+		"selectedColor": "#FFBA26",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+				"pagePath": "pages/home/home",
+				"iconPath": "static/images/tabbar/tabbar-icon-home.png",
+				"selectedIconPath": "static/images/tabbar/tabbar-icon-active-home.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/map/map",
+				"iconPath": "static/images/tabbar/tabbar-icon-map.png",
+				"selectedIconPath": "static/images/tabbar/tabbar-icon-active-map.png",
+				"text": "地图"
+			},
+			{
+				"pagePath": "pages/echarts/echarts",
+				"iconPath": "static/images/tabbar/tabbar-icon-echarts.png",
+				"selectedIconPath": "static/images/tabbar/tabbar-icon-active-echarts.png",
+				"text": "报表"
+			},
+			{
+				"pagePath": "pages/monitor/monitor",
+				"iconPath": "static/images/tabbar/tabbar-icon-monitor.png",
+				"selectedIconPath": "static/images/tabbar/tabbar-icon-active-monitor.png",
+				"text": "监控"
+			},
+			{
+				"pagePath": "pages/user/user",
+				"iconPath": "static/images/tabbar/tabbar-icon-user.png",
+				"selectedIconPath": "static/images/tabbar/tabbar-icon-active-user.png",
+				"text": "个人"
+			}
+		]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "普达措国家公园",
+		"navigationBarBackgroundColor": "#FFBA26",
+		"backgroundColor": "#F8F8F8"
+	}
+}
