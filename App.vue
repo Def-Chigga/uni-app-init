@@ -16,10 +16,11 @@
 			}, 2400);
 			// #endif
 			console.log('App Launch')
+			// 每次APP启动看token是否过期
+			this.$storage('nld_login_token', null)
 		},
 		onShow: function() {
 			console.log('App Show')
-			this.$storage('nld_login_token',null)
 		},
 		onHide: function() {
 			console.log('App Hide')
@@ -36,6 +37,10 @@
 		color: #333333;
 	}
 
+	uni-page-body {
+		height: 100%;
+	}
+
 	ul {
 		margin: 0;
 		padding: 0;
@@ -45,12 +50,25 @@
 		list-style: none;
 	}
 
+	/*轮播图样式填充 */
+	uni-swiper {
+		width: 100%;
+		height: 100%;
+
+		swiper-item {
+			image {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
 	/* 轮播图指示器样式 */
 	.uni-swiper-dots {
 		.uni-swiper-dot {
 			width: 8rpx;
 			height: 8rpx;
-			margin-right: 4rpx !important;
+			margin-right: 8rpx !important;
 		}
 
 		.uni-swiper-dot-active {

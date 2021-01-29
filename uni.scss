@@ -23,6 +23,49 @@ $pdc-app-color: #FFBA26;
   -webkit-box-orient:vertical;
   -webkit-line-clamp:$index;
 }
+/* 弹性布局水平垂直居中 */
+@mixin FXYCenter() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/* 弹性布局水平居中 */
+@mixin FXCenter() {
+	display: flex;
+	justify-content: center;
+}
+/* 弹性布局垂直居中 */
+@mixin FYCenter() {
+	display: flex;
+	align-items: center;
+}
+/* 弹性布局两端对齐垂直居中 */
+@mixin FYCenterSB() {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+/* 水平居中 */
+@mixin XCenter(){
+  position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+/* 垂直居中 */
+@mixin YCenter(){
+  position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+}
+/* 水平垂直居中 */
+@mixin XYCenter(){
+  position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
 /* 行为相关颜色 */
 $uni-color-primary: #007aff;
 $uni-color-success: #4cd964;

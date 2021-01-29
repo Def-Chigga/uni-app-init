@@ -10,20 +10,23 @@ export const http = (options) => {
 			url: BASE_URL + options.url,
 			method: options.method || 'POST',
 			data: options.data || {page:1,pageSize:30},
-			header:options.header || {
-				'Content-Type':'application/json',
-				'nld_login_token': uni.getStorageSync('nld_login_token') !== undefined ? uni.getStorageSync('nld_login_token') : ''},
+			header:options.header || 
+				{
+					'Content-Type':'application/json',
+					// 切割使用token 不要|与时间差
+					'nld_login_token': uni.getStorageSync('nld_login_token') !== undefined ? uni.getStorageSync('nld_login_token').split('|')[0] : '',
+				},
 			// 允许跨域
 			withCredentials: true,
 			success: (res) => {
 				if (res.data.status !== 1) {
 					if (res.data.status === 10001){
-						return uni.showToast({
+						uni.showToast({
 							title: '需要登录',
 							icon: 'none'
 						})
 					}else{
-						return uni.showToast({
+						uni.showToast({
 								title: '获取数据失败',
 								icon: 'none'
 						})

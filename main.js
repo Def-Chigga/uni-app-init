@@ -2,9 +2,13 @@ import Vue from 'vue'
 import App from './App'
 
 // 引入封装好的请求文件
-import { http } from './util/api.js'
+import { http } from './util/api.js';
 // 挂载到vue原型上，通过this.$http调用
-Vue.prototype.$http = http
+Vue.prototype.$http = http;
+// 引入工具类
+import tools from '@/util/common.js';
+Vue.use(tools)
+
 
 //缓存,默认有效期8小时
 Vue.prototype.$storage = function(key, value, seconds) {
@@ -20,14 +24,20 @@ Vue.prototype.$storage = function(key, value, seconds) {
 		if (!tmp[1] || timestamp >= tmp[1]) {
 			console.log("token已失效")
 			uni.removeStorageSync(key)
-			uni.reLaunch({
-				url: '/pages/login/login.vue'
-			})
+			setTimeout(()=>{
+				uni.reLaunch({
+					// 注意路径为相对路径
+					url: '../login/login'
+				})
+			},500)
 		} else {
 			console.log("token未失效")
-			uni.switchTab({
-				url: '/pages/home/home.vue'
-			})
+			setTimeout(()=>{
+				uni.switchTab({
+					// 注意路径为相对路径
+					url: '../home/home'
+				})
+			},500)
 		}
 	} else if (key && value) {
 		//设置缓存
