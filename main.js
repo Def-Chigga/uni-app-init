@@ -5,6 +5,12 @@ import App from './App'
 import { http } from './util/api.js';
 // 挂载到vue原型上，通过this.$http调用
 Vue.prototype.$http = http;
+
+// 注册全局组件
+// import XXX from '';
+// Vue.component('xxx', XXX)
+// <xxx></xxx>
+
 // 引入工具类
 import tools from '@/util/common.js';
 Vue.use(tools)

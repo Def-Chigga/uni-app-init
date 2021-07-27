@@ -1,0 +1,112 @@
+
+/* 超出行数变为... */
+@mixin clampN($index){
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:$index;
+}
+/* 水平垂直定位居中 */
+@mixin posCenterXY{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+/* 水平定位居中 */
+@mixin posCenterX{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* 垂直定位居中 */
+@mixin posCenterY{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* flex伸缩布局 水平方向 垂直居中*/
+@mixin flexRow{
+  display: flex;
+  align-items: center;
+}
+/* flex伸缩布局 垂直方向*/
+@mixin flexCol{
+  display: flex;
+  flex-direction: column;
+}
+/* flex伸缩布局 水平方向 垂直居中 换行 */
+@mixin flexRowWrap{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+/* flex伸缩布局 水平垂直居中*/
+@mixin flexRowCenter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* flex伸缩布局 水平垂直居中*/
+@mixin flexColCenter{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* flex伸缩布局 space-between 并居中*/
+@mixin flexSb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* flex伸缩布局 space-around 并居中*/
+@mixin flexSa {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/* 设置输入框placeholder值样式*/
+@mixin phStyle($color: #333) {
+  input::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: $color;
+  }
+  input:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: $color;
+  }
+  input::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: $color;
+  }
+  input:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: $color;
+  }
+}
+
+/* 设置滚动条样式 给需要设置滚动条的容器添加类名 scroller*/
+@mixin scrollStyle($width: 8px, $height: 8px, $trackBg: #F5F5F5, $thumbBg: #c8c8c8){
+  .scroller::-webkit-scrollbar {
+    width: $width;
+    height: $height;
+  }
+
+  /*定义滚动条轨道*/
+  .scroller::-webkit-scrollbar-track {
+    background-color:$trackBg;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius:2em;
+  }
+  /*定义滑块*/
+  .scroller::-webkit-scrollbar-thumb {
+    background-color:$thumbBg;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius:2em;
+  }
+}

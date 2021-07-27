@@ -29,24 +29,22 @@
 </script>
 
 <style lang="scss">
-	/*清空默认的样式*/
-	html{color:#000;background:#F9F9F9}
-	body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
-	table{border-collapse:collapse;border-spacing:0}
-	fieldset,img{border:0}
-	address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
-	ol,ul{list-style:none}
-	caption,th{text-align:left}
-	h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
-	q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}
-	sup{vertical-align:text-top}
-	sub{vertical-align:text-bottom}
-	input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}
-	legend{color:#000}#yui3-css-stamp.cssreset{display:none}
-	a{text-decoration: none; color: #999}
+	/* 官方css库 */
+	@import "./common/uni.css";
+	/* 项目初始化 */
+	@import "./common/reset.css";
+	/* 自定义图标库 */
+	@import "./common/icon.css";
+	/* 动画库 */
+	@import "./common/animate.css";
+	/* 混合方法样式 */
+	@import "./common/mixin.scss";
+	/* 自定义样式库 */
+	@import "./common/chigga.scss";
 	
 	/*每个页面公共css */
 	uni-page {
+		width: 100%;
 		font-size: 28rpx;
 		font-weight: 400;
 		font-family: PingFang SC, Microsoft YaHei;
@@ -55,10 +53,12 @@
 	}
 
 	uni-page-wrapper{
+		width: 100%;
 		height: 100%;
 		background: #F9F9F9;
 	}
 	uni-page-body {
+		width: 100%;
 		height: 100%;
 		background: #F9F9F9;
 	}

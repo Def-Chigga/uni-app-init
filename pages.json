@@ -1,83 +1,65 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页
 		{
-			"path": "pages/login/login",
+			"path": "pages/home/home",
 			"style": {
-				"app-plus": {
-					"titleNView": false //禁用原生导航栏
-				}
+				"navigationBarTitleText": "首页"
 			}
 		},
 		{
-			"path": "pages/login/login-form",
+			"path": "pages/paper/paper",
 			"style": {
-				"app-plus": {
-					"titleNView": false //禁用原生导航栏
-				}
+				"navigationBarTitleText": "动态"
 			}
 		},
 		{
-			"path": "pages/msg/msg",
+			"path": "pages/news/news",
 			"style": {
-				"navigationBarTitleText": "msg"
+				"navigationBarTitleText": "新闻"
 			}
 		},
 		{
-			"path": "pages/member/member",
+			"path": "pages/my/my",
 			"style": {
-				"navigationBarTitleText": "member"
-			}
-		},
-		{
-			"path": "pages/platform/platform",
-			"style": {
-				"app-plus": {
-					"titleNView": false //禁用原生导航栏
-				}
-			}
-		},
-		{
-			"path": "pages/user/user",
-			"style": {
-				"navigationBarTitleText": "user"
+				"navigationBarTitleText": "我的"
 			}
 		}
-	],
+  ],
 	"tabBar": {
 		"color": "#8C9198",
 		"selectedColor": "#4C92FF",
 		"borderStyle": "white",
 		"backgroundColor": "#ffffff",
 		"list": [{
-				"pagePath": "pages/msg/msg",
-				"iconPath": "static/images/tabbar/tabbar-icon-msg.png",
-				"selectedIconPath": "static/images/tabbar/tabbar-icon-msg-active.png",
+				"pagePath": "pages/home/home",
+				"iconPath": "static/images/tabbar/tabbar-icon-home.png",
+				"selectedIconPath": "static/images/tabbar/tabbar-icon-home-active.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/paper/paper",
+				"iconPath": "static/images/tabbar/tabbar-icon-paper.png",
+				"selectedIconPath": "static/images/tabbar/tabbar-icon-paper-active.png",
+				"text": "动态"
+			},
+			{
+				"pagePath": "pages/news/news",
+				"iconPath": "static/images/tabbar/tabbar-icon-news.png",
+				"selectedIconPath": "static/images/tabbar/tabbar-icon-news-active.png",
 				"text": "消息"
 			},
 			{
-				"pagePath": "pages/member/member",
-				"iconPath": "static/images/tabbar/tabbar-icon-member.png",
-				"selectedIconPath": "static/images/tabbar/tabbar-icon-member-active.png",
-				"text": "成员"
-			},
-			{
-				"pagePath": "pages/platform/platform",
-				"iconPath": "static/images/tabbar/tabbar-icon-platform.png",
-				"selectedIconPath": "static/images/tabbar/tabbar-icon-platform-active.png",
-				"text": "工作台"
-			},
-			{
-				"pagePath": "pages/user/user",
-				"iconPath": "static/images/tabbar/tabbar-icon-me.png",
-				"selectedIconPath": "static/images/tabbar/tabbar-icon-me-active.png",
-				"text": "我"
+				"pagePath": "pages/my/my",
+				"iconPath": "static/images/tabbar/tabbar-icon-my.png",
+				"selectedIconPath": "static/images/tabbar/tabbar-icon-my-active.png",
+				"text": "我的"
 			}
 		]
 	},
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
-		"navigationBarTitleText": "普达措国家公园",
-		"navigationBarBackgroundColor": "#4C92FF",
+		"navigationBarTitleText": "项目初始化",
+		"navigationBarBackgroundColor": "#000000",
 		"backgroundColor": "#F8F8F8",
 		"scrollIndicator": "none" // 不显示滚动条
 	}
