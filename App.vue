@@ -30,15 +30,17 @@
 
 <style lang="scss">
 	/* 官方css库 */
-	@import "./common/uni.css";
+	@import "./common/css/uni.css";
 	/* 项目初始化 */
-	@import "./common/reset.css";
+	@import "./common/css/reset.css";
 	/* 自定义图标库 */
-	@import "./common/icon.css";
+	@import "./common/css/icon.css";
 	/* 动画库 */
-	@import "./common/animate.css";
+	@import "./common/css/animate.css";
+	/* 轮播图动画库 */
+	@import "./common/css/swiper-animate.css";
 	/* 自定义样式库 */
-	@import "./common/chigga.scss";
+	@import "./common/css/chigga.scss";
 	
 	/*页面公共css */
 	page{
@@ -63,19 +65,19 @@
 		}
 	}
 
-	/* 轮播图指示器样式 */
-	.uni-swiper-dots {
-		.uni-swiper-dot {
-			width: 8rpx;
-			height: 8rpx;
-			margin-right: 8rpx !important;
-		}
+	// /* 轮播图指示器样式 */
+	// .uni-swiper-dots {
+	// 	.uni-swiper-dot {
+	// 		width: 8rpx;
+	// 		height: 8rpx;
+	// 		margin-right: 8rpx !important;
+	// 	}
 
-		.uni-swiper-dot-active {
-			width: 28rpx;
-			height: 8rpx;
-			border-radius: 4rpx;
-		}
-	}
+	// 	.uni-swiper-dot-active {
+	// 		width: 28rpx;
+	// 		height: 8rpx;
+	// 		border-radius: 4rpx;
+	// 	}
+	// }
 
 </style>

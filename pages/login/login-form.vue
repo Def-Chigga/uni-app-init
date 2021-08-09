@@ -48,7 +48,7 @@
 				} */
 				// 调用登录接口
 				uni.switchTab({
-					url: '../platform/platform'
+					url: '../home/home'
 				})
 			}
 		}

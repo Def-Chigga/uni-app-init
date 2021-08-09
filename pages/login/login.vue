@@ -1,12 +1,12 @@
 <template>
 	<view class="login">
 		<view class="login-top">
-			<image class="login-bg" src="../../static/images/login/login-bg.png" mode="scaleToFill"></image>
+			<image class="login-bg" src="/static/images/login/login-bg.png" mode="scaleToFill"></image>
 			<view class="welcome">欢迎 !</view>
 		</view>
 		<view class="login-bottom">
-			<image class="login-logo" src="../../static/images/login/login-logo.png" mode="scaleToFill"></image>
-			<view class="login-title"> 北纬数据  管理系统</view>
+			<image class="login-logo" src="/static/logo.png" mode="scaleToFill"></image>
+			<view class="login-title"> uni-app项目实战</view>
 			<button class="login-btn" type="default" @click="toLoginForm">登录</button>
 		</view>
 	</view>

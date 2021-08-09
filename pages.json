@@ -1,66 +1,81 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页
 		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationStyle":"custom"
+			}
+		},
+		{
+			"path": "pages/login/login-form",
+			"style": {
+				"navigationStyle":"custom"
+			}
+		},
+		{
 			"path": "pages/home/home",
 			"style": {
 				"navigationBarTitleText": "首页"
 			}
 		},
 		{
-			"path": "pages/paper/paper",
+			"path": "pages/sort/sort",
 			"style": {
-				"navigationBarTitleText": "动态"
+				"navigationBarTitleText": "分类"
 			}
 		},
 		{
-			"path": "pages/news/news",
+			"path": "pages/collection/collection",
 			"style": {
-				"navigationBarTitleText": "新闻"
+				"navigationBarTitleText": "收藏"
 			}
 		},
 		{
-			"path": "pages/my/my",
+			"path": "pages/user/user",
 			"style": {
 				"navigationBarTitleText": "我的"
 			}
 		}
   ],
 	"tabBar": {
-		"color": "#8C9198",
-		"selectedColor": "#4C92FF",
+		"selectedColor": "#dc4d2f",
+		"fontSize": "12px",
+		"backgroundColor": "#f4f7fc",
 		"borderStyle": "white",
-		"backgroundColor": "#ffffff",
 		"list": [{
 				"pagePath": "pages/home/home",
-				"iconPath": "static/images/tabbar/tabbar-icon-home.png",
-				"selectedIconPath": "static/images/tabbar/tabbar-icon-home-active.png",
+				"iconPath": "static/images/tabbar/index.png",
+				"selectedIconPath": "static/images/tabbar/indexed.png",
 				"text": "首页"
 			},
 			{
-				"pagePath": "pages/paper/paper",
-				"iconPath": "static/images/tabbar/tabbar-icon-paper.png",
-				"selectedIconPath": "static/images/tabbar/tabbar-icon-paper-active.png",
-				"text": "动态"
+				"pagePath": "pages/sort/sort",
+				"iconPath": "static/images/tabbar/sort.png",
+				"selectedIconPath": "static/images/tabbar/sorted.png",
+				"text": "分类"
 			},
 			{
-				"pagePath": "pages/news/news",
-				"iconPath": "static/images/tabbar/tabbar-icon-news.png",
-				"selectedIconPath": "static/images/tabbar/tabbar-icon-news-active.png",
-				"text": "消息"
+				"pagePath": "pages/collection/collection",
+				"iconPath": "static/images/tabbar/collection.png",
+				"selectedIconPath": "static/images/tabbar/collectioned.png",
+				"text": "收藏"
 			},
 			{
-				"pagePath": "pages/my/my",
-				"iconPath": "static/images/tabbar/tabbar-icon-my.png",
-				"selectedIconPath": "static/images/tabbar/tabbar-icon-my-active.png",
+				"pagePath": "pages/user/user",
+				"iconPath": "static/images/tabbar/mine.png",
+				"selectedIconPath": "static/images/tabbar/mined.png",
 				"text": "我的"
 			}
 		]
 	},
 	"globalStyle": {
-		"navigationBarTextStyle": "white",
-		"navigationBarTitleText": "项目初始化",
-		"navigationBarBackgroundColor": "#000000",
+		"navigationBarTextStyle": "black",
+		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8",
-		"scrollIndicator": "none" // 不显示滚动条
+		"scrollIndicator": "none", // 不显示滚动条
+		"app-plus": {
+			"titleNView": false,
+			"bounce": "none"
+		}
 	}
 }

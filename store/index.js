@@ -1,4 +1,3 @@
-
 import Vue from 'vue'
 import Vuex from 'vuex'
 
@@ -6,7 +5,6 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
 	state:{
-		
 		// Socket连接状态
 		IsOpen:false,
 		// SocketTask
@@ -46,7 +44,6 @@ export default new Vuex.Store({
 				console.log('连接已关闭');
 				state.IsOpen = false;
 				state.SocketTask = false;
-				state.IsOnline = false
 				// 清空会话列表
 				// 更新未读数提示
 			})
@@ -55,7 +52,6 @@ export default new Vuex.Store({
 				console.log('连接错误');
 				state.IsOpen = false;
 				state.SocketTask = false;
-				state.IsOnline = false
 			})
 			// 监听接收信息
 			state.SocketTask.onMessage((e)=>{

@@ -8,16 +8,19 @@ Vue.prototype.$store = store
 import { http } from './util/api.js';
 // 挂载到vue原型上，通过this.$http调用
 Vue.prototype.$http = http;
+// 引入全局过滤
+import '@/util/filter.js';
+// 引入工具类
+import tools from '@/util/common.js';
+Vue.use(tools)
+// 引入全局工具类
+import $util from '@/util/util.js'
+Vue.prototype.$util = $util
 
 // 注册全局组件
 // import XXX from '';
 // Vue.component('xxx', XXX)
 // <xxx></xxx>
-
-// 引入工具类
-import tools from '@/util/common.js';
-Vue.use(tools)
-
 
 //缓存,默认有效期8小时
 Vue.prototype.$storage = function(key, value, seconds) {
