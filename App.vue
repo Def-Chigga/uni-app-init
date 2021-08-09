@@ -8,16 +8,16 @@
 			// wsHttp: 'ws://192.168.0.142:8889/ws',
 			// wsHttp: 'ws://pdc.yn.cn:8889/ws'
 		},
-		onLaunch: function() {
-			// #ifdef APP-PLUS
-			//设置2.4秒后主动关闭，最多设置6秒
-			setTimeout(() => {
-				plus.navigator.closeSplashscreen();
-			}, 2400);
-			// #endif
+		onLaunch: function() {	
 			console.log('App Launch')
-			// 每次APP启动看token是否过期
-			this.$storage('nld_login_token', null)
+			// 监听用户登录状态
+			this.$util.onUserState();
+			
+			// 监听网络状态
+			this.$util.onNetWorkState()
+			
+			// 热更新
+			this.$util.onHotUpdate()
 		},
 		onShow: function() {
 			console.log('App Show')
@@ -37,29 +37,16 @@
 	@import "./common/icon.css";
 	/* 动画库 */
 	@import "./common/animate.css";
-	/* 混合方法样式 */
-	@import "./common/mixin.scss";
 	/* 自定义样式库 */
 	@import "./common/chigga.scss";
 	
-	/*每个页面公共css */
-	uni-page {
-		width: 100%;
+	/*页面公共css */
+	page{
+		height: 100%;
 		font-size: 28rpx;
 		font-weight: 400;
 		font-family: PingFang SC, Microsoft YaHei;
 		color: #333333;
-		background: #F9F9F9;
-	}
-
-	uni-page-wrapper{
-		width: 100%;
-		height: 100%;
-		background: #F9F9F9;
-	}
-	uni-page-body {
-		width: 100%;
-		height: 100%;
 		background: #F9F9F9;
 	}
 

@@ -56,6 +56,13 @@
   align-items: center;
   justify-content: center;
 }
+/* flex伸缩布局 水平居中 垂直两端对齐*/
+@mixin flexColSb{
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: center;
+}
 /* flex伸缩布局 space-between 并居中*/
 @mixin flexSb {
   display: flex;
